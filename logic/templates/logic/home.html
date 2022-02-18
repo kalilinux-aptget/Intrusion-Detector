@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <title>Final year project</title>
+  </head>
+  <body>
+    <h1>Hello Professors!</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="design">Features</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<form  action="{% url 'output-page' %}" method='POST'>
+{% csrf_token %}
+
+<label for="quantity">Source Bytes (between 1 and 50):</label>
+  <input type="text" id="quantity" name="srcbytes" min="0" max="50">
+  <br>
+  <label for="quantity">destination Bytes:</label>
+  <input type="text" id="quantity" name="dstbytes" min="0" max="50"><br>
+  <label for="quantity"> HOT:</label>
+  <input type="text" id="quantity" name="hot" min="0" max="50"><BR>
+  <label for="quantity">Logged in:</label>
+  <input type="text" id="quantity" name="logged_in" min="0" max="50"><br>
+  <label for="quantity">Count:</label>
+  <input type="text" id="quantity" name="count" min="0" max="50"><br>
+  <label for="quantity">srv_count:</label>
+  <input type="text" id="quantity" name="srv_count" min="0" max="50"><br>
+    <label for="quantity">same_srv_rate:</label>
+  <input type="text" id="quantity" name="same_srv_rate" min="0" max="50"><br>
+      <label for="quantity">diff_srv_rate:</label>
+  <input type="text" id="quantity" name="diff_srv_rate" min="0" max="50"><br>
+        <label for="quantity">dst_host_same_srv_rate:</label>
+  <input type="text" id="quantity" name="dst_host_same_srv_rate" min="0" max="50"><br>
+          <label for="quantity">dst_host_srv_count:</label>
+  <input type="text" id="quantity" name="dst_host_srv_count" min="0" max="50"><br>
+            <label for="quantity">dst_host_diff_srv_rate:</label>
+  <input type="text" id="quantity" name="dst_host_diff_srv_rate" min="0" max="50"><br>
+              <label for="quantity">dst_host_same_src_port_rate:</label>
+  <input type="text" id="quantity" name="dst_host_same_src_port_rate" min="0" max="500"><br>
+                <label for="quantity">protocol_type:</label>
+  <input type="text" id="quantity" name="protocol_type" min="0" max="500"><br>
+                  <label for="quantity">service:</label>
+  <input type="text" id="quantity" name="service" min="0" max="500"><br>
+                    <label for="quantity">flag:</label>
+  <input type="text" id="quantity" name="flag" min="0" max="5000"><br>
+  <input type="submit" value="Submit">
+  </form>
+
+{% comment %}
+    <label for="example">dst_bytes</label>
+    <input id="example" type="text" name="dst_bytes">
+  </div>
+  <div>
+    <label for="example">hot </label>
+    <input id="example" type="text" name="hot ">
+  </div>
+
+   <div>
+    <label for="example">logged_in</label>
+    <input id="example" type="text" name="logged_in">
+  </div>
+   <div>
+    <label for="example">count</label>
+    <input id="example" type="text" name="count">
+  </div>
+  
+   <div>
+    <label for="example">srv_count</label>
+    <input id="example" type="text" name="srv_count">
+  </div>
+ 
+   <div>
+    <label for="example">same_srv_rate  </label>
+    <input id="example" type="text" name="same_srv_rate">
+  </div>
+   <div>
+    <label for="example">diff_srv_rate</label>
+    <input id="example" type="text" name="diff_srv_rate">
+  </div>
+
+   <div>
+    <label for="example">dst_host_same_srv_rate</label>
+    <input id="example" type="text" name="dst_host_same_srv_rate">
+  </div>
+
+   <div>
+    <label for="example">dst_host_srv_count</label>
+    <input id="example" type="text" name="dst_host_srv_count  ">
+  </div>
+ 
+   <div>
+    <label for="example">dst_host_diff_srv_rate  </label>
+    <input id="example" type="text" name="dst_host_diff_srv_rate  ">
+  </div>
+
+   <div>
+    <label for="example">dst_host_same_src_port_rate</label>
+    <input id="example" type="text" name="dst_host_same_src_port_rate  ">
+  </div>
+ 
+   <div>
+    <label for="example">protocol_type </label>
+    <input id="example" type="text" name="protocol_type  ">
+  </div>
+
+   <div>
+    <label for="example">service</label>
+    <input id="example" type="text" name="service  ">
+  </div>
+  
+   <div>
+    <label for="example">flag</label>
+    <input id="example" type="text" name="flag">
+  </div> 
+<<input type='submit' value ='submit'>
+  </div> {% endcomment %}
+
+
+
+  </body>
+</html>
